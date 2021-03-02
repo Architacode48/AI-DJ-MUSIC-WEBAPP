@@ -1,0 +1,28 @@
+body{
+    background-size: cover;
+}
+.heading{
+    font-size:59px;
+    color:black;
+    font-family:'Weisshorn Rough', cursive;
+}
+.note{
+    color:deeppink;
+    font-family: 'Kaushan Script', cursive;
+    font-size:18px;
+}
+.songplay{
+    background-color: rgb(29, 29, 29);
+    color:seagreen;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight:bolder;
+    font-size:25px;
+}
+canvas{
+    border-top:6px dashed rgb(29, 29, 29);
+    border-bottom:6px dashed rgb(29, 29, 29);
+    border-right:6px dashed seagreen;
+    border-left:6px dashed seagreen;
+    margin-top: 100px;
+
+}
