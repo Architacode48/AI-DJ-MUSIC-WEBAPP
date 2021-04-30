@@ -9,7 +9,7 @@ lwristY=0;
 scoreRwrist=0;
 scoreLwrist=0;
 function setup(){
-    canvas=createCanvas(400,350);
+    canvas=createCanvas(600,500);
     canvas.center();
     video=createCapture(VIDEO);
     video.hide();
@@ -20,31 +20,31 @@ function modelLoaded(){
   console.log('posenet is initialized');
 }
 function draw(){
-  image(video,0,0,400,350);
+  image(video,0,0,600,500);
   fill("#FF0000");
   stroke("#FF0000");
   song1status=song1.isPlaying();
   song2status=song2.isPlaying();
-  if(scoreRwrist>0.2){
+  if(scoreRwrist>0.1){
    circle(rwristX,rwristY,20);
    song1.stop();
    if(song2status==false){
      song2.play();
-     document.getElementById("speed").innerHTML="Super Mario Bros. Theme Song";
+     document.getElementById("speed").innerHTML="Count On Me.mp3";
    }
   }
-  if(scoreLwrist>0.2){
+  if(scoreLwrist>0.1){
     circle(lwristX,lwristY,20);
     song2.stop();
     if(song1status==false){
       song1.play();
-      document.getElementById("speed").innerHTML="Harry Potter Theme Song";
+      document.getElementById("speed").innerHTML="Mackenzie Ziegler - Breathe (Official Music Video).mp3";
     }
    }
 }
 function preload(){
-  song1=loadSound("Harry Potter Theme Song.mp3");
-  song2=loadSound("Super Mario Bros. Theme Song.mp3");
+  song1=loadSound("Mackenzie Ziegler - Breathe (Official Music Video).mp3");
+  song2=loadSound("Count On Me.mp3");
 }
 function gotPoses(results){
   if(results.length>0){
@@ -64,5 +64,5 @@ function play(){
   song1.play();
   song2.play();
   song1.setVolume(1);
-  song2.setVolume(2);
+  song2.setVolume(1);
 }
